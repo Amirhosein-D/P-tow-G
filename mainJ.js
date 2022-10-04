@@ -90,3 +90,15 @@ function dan(){
     const spinner = document.querySelector('.lds-spinner');
     spinner.classList.add('dan')
 }
+// aboote more ):
+const gotoaboutemore = document.querySelector('.gotoaboutemore');
+
+gotoaboutemore.addEventListener('click',() => {window.location = 'abouteH.html'})
+// go to form for discount container ):
+const gotoform3 = document.querySelector('.gotoform3');
+gotoform3.addEventListener('click',() => {window.location = 'formH.html'});
+// go to product page after click to btn menu container ):
+const gotoproduct3 = document.querySelector('.gotoproduct3');
+gotoproduct3.addEventListener('click',() => {
+    window.location = 'productH.html'
+});
