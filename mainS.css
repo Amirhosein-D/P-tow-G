@@ -474,3 +474,59 @@ a {cursor: pointer;}
     background: var(--M-Yellow);
     font-weight: bold;
 }
+/* -=-=-=- contact us -=-=-=- */
+.contactus {
+    width: 100%;
+    min-height: 100%;
+    background: var(--M-Black);
+    display: flex;align-items: center;justify-content: space-between;
+    overflow: hidden;
+    transition: .8s linear;
+    padding: 0; padding-top: 3rem;
+}
+.contactus .map {width: 50%;height: 50vh;
+    filter: brightness(60%);
+    transition: .8s linear;
+}
+.contactus .map:hover , .contactus .map:focus {filter: brightness(100%);}
+.contactus form {
+    display: flex;align-items: center;justify-content: center;
+    flex-direction: column;gap: 3rem;
+    padding: 2rem;
+    background: var(--MM-Black);
+    width: 50%;height: 50vh;
+    transition: .8s linear;
+}
+.contactus form .inputBox {
+    display: flex;align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.697);
+    padding: 1rem;
+    background: var(--M-Black);
+    width: 80%;
+    border-radius: .2rem;
+}
+.contactus form .inputBox span {
+    color: var(--M-Yellow);
+    font-size: 2.2rem;
+    margin: 0 1rem;
+}
+.contactus form .inputBox  input {
+    font-size: 1.6rem;
+    background: transparent;
+    letter-spacing: 1.5;
+    color: var(--M-White);
+    width: 100%;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input{-moz-appearance: textfield;}
+.contactus form .btn {
+    padding: 1rem;
+    background-color: var(--M-Yellow);
+    font-size: 1.7rem;
+    font-weight: 900;
+    letter-spacing: 2;
+    width: 80%;
+}
