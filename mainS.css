@@ -530,3 +530,83 @@ input{-moz-appearance: textfield;}
     letter-spacing: 2;
     width: 80%;
 }
+/* -=-=-=- footer -=-=-=- */
+footer .container {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+footer .container .bacimg {
+    background-image: url('./icon image/c12.jpg');
+    filter: brightness(40%);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    background-attachment: fixed;
+}
+footer .container .container2 {
+    position: absolute;
+    top: 0; left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%; height: 100%;
+}
+footer .container .iconBox a i {
+    font-size: 3rem;
+    color: var(--M-Yellow);
+    z-index: 1000;
+    margin: 0 .7rem;
+}
+footer .container .numbersFF {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: .7rem;
+}
+footer .container .numbersFF span {
+    color: var(--M-White);
+    font-size: 2rem;
+    letter-spacing: 1.5;
+    font-weight: 900;
+}
+footer .container .locations {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 40%;
+}
+footer .container .locations span {
+    color: var(--M-Yellow);
+    font-size: 2rem;
+    letter-spacing: 1.5;
+    flex-wrap: wrap;
+}
+footer .container .linksFF {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+footer .container .linksFF a {
+    padding: 1rem;
+    border: 1px solid var(--M-Yellow);
+    background: transparent;
+    color: var(--M-White);
+    font-size: 2.2rem;
+    letter-spacing: 1.7;
+    text-align: center;
+    border-top-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}

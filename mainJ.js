@@ -69,3 +69,17 @@ goOneparttoUp.addEventListener('click',() => {
     up == 4 && (window.location = '#comment',dwon = 3,up = 3);
     up == 5 && (window.location = '#discount',dwon = 4,up = 4);
 });
+// footer links ):
+const gotoproduct2 = document.querySelector('.gotoproduct2');
+const gotologin2 = document.querySelector('.gotologin2');
+const gotoform2 = document.querySelector('.gotoform2');
+
+gotoproduct2.addEventListener('click',() => {
+    window.location = 'productH.html'
+});
+gotologin2.addEventListener('click',() => {
+    window.location = 'logH.html'
+});
+gotoform2.addEventListener('click',() => {
+    window.location = 'formH.html'
+});
