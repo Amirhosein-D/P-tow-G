@@ -310,3 +310,66 @@ a {cursor: pointer;}
     text-align: center;
     margin: 1rem 0;
 }
+/* -=-=-=- comments -=-=-=- */
+.comment {
+    background: var(--M-Black);
+    width: 100%;
+    min-height: 43vh;
+    padding: 3.5rem;
+}
+.comment .containerC {
+    background: var(--M-Black);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit , minmax(30rem , 1fr));
+}
+.comment .containerC .part {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+    box-shadow: 0 0 10px 5px var(--M-Yellow);
+    border-radius: 1rem;
+    margin: 0 3rem;
+}
+.comment .containerC .part:hover {box-shadow: 0 0 15px 10px var(--M-White);}
+
+.comment .containerC .part .userC1 {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.comment .containerC .part .userC1 img {
+    height: 8rem;
+    width: 8rem;
+    border-radius: .5rem;
+    object-fit: cover;
+}
+.comment .containerC .part .userC1 .userC2 {display: grid;gap: .7rem;}
+.comment .containerC .part .userC1 .userC2 span {font-size: 2rem;color: var(--M-White);}
+.comment .containerC .part .userC1 .userC2 .stars {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.comment .containerC .part .userC1 .userC2 .stars i {color: var(--M-Yellow);font-size: 1.3rem;}
+.comment .containerC .part .ri-chat-quote-fill {
+    font-size: 4rem;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    color: var(--MM-Yellow);
+}
+.comment .containerC .part .textC p {
+    font-size: 1.3rem;
+    color: var(--MM-White);
+    letter-spacing: 1.5px;
+}
