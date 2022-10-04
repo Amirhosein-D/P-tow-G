@@ -102,3 +102,70 @@ const gotoproduct3 = document.querySelector('.gotoproduct3');
 gotoproduct3.addEventListener('click',() => {
     window.location = 'productH.html'
 });
+// search box main ):
+const inputSearchMain = document.querySelector('.inputSearchMain');
+const btninputSearchMain = document.querySelector('.btninputSearchMain');
+
+btninputSearchMain.addEventListener('click',() => {
+    const inputSearchMainValue1 = String(inputSearchMain.value);
+    const inputSearchMainValue2 = inputSearchMainValue1.toLocaleLowerCase();
+    checkOut(inputSearchMainValue2);
+});
+
+function checkOut(value) {
+
+    // clear input searching after search ):
+    function clearSearchBox() {
+        value = "";
+        searchBox.classList.remove('openSearchBox');
+        searchBoxBtn.classList = 'ri-search-line';
+    };
+    // searching :: move to the container ):
+    function Searching1(value) {
+        location.href = `${value}`;
+        clearSearchBox();
+    };
+    // searching :: move to the page ):
+    function Searching2(value) {
+        window.location = `${value}`;
+        clearSearchBox();
+    };
+
+    const allWords = {
+        // home ):
+        home : ['home'],
+        // aboute more ):
+        abouteH : ['about more','about more','aboutmore','aboutenore'],
+        // discount ):
+        discount : ['discount','discounts','redate','alleviation','cut','relaxation','damping','black friday'],
+        // aboute ):
+        aboute : ['aboute','aboute us','yours','about'],
+        // menu ):
+        menu : ['menu','menup'],
+        // comment ):
+        comment : ['comment','comments','Opinion','view','look'],
+        // us and contact ):
+        contactus : ['us','contact','location','locations','instagram','twiter','telegram','number','numbers','links'],
+        // form ):
+        formH : ['store','form','shop','shoop','shooping','order','ordering','buy'],
+        // product ):
+        productH : ['Coantino','Colat Ti','Nop likardo','Poli Nin','Asdiko Lingard','Nobilo','Picaso','Late',
+        'Savege','Black cofee','Mirrow W','Hat Bijo','Capochino Ti','Kiling W','Fraim Npo','Kinploid','Prag Hok','Lop wib',
+        'Adiof Fila','IceFilokt','Mim Jolien','Gelenfidich','Copya','products','products','Kk wine','Lopik Ko','Vopiko & Amike',
+        'Black Tik','Colaxi','Yolomik','Cikako','Cigarettes','Wine','cofee','wines','marijuaba'],
+        // log in and sing up ):
+        logH : ['login','log','sign','log in','singup','sing up','log in sing up']
+    }
+    let boolFounded = 1;
+    for (const [strKey, arrValue] of Object.entries(allWords)) {
+        if (arrValue.includes(value)) {
+            ["formH","productH","logH","abouteH"].includes(strKey) ? Searching2(`${strKey}.html`) : Searching1(`#${strKey}`);boolFounded = 2; 
+            break;
+        };
+    };
+    if (boolFounded == 1) {
+        clearSearchBox();
+        alert("Your search is null");
+    };
+    // or let {boolFounded = false} beshe {boolFounded = true} ke to if jkhar  {!boolFounded}
+};
