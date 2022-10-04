@@ -1,0 +1,162 @@
+* {
+    font-family: 'Dosis', sans-serif;
+    padding: 0;margin: 0;border: none;outline: none;
+    text-decoration: none; box-sizing: border-box;
+    list-style: none;
+    transition: .7s linear;
+}
+:root {
+    --M-Black: #151212;
+    --MM-Black: black;
+    --M-Yellow: #ffd500;
+    --MM-Yellow: #f2ff00;
+    --M-White: rgb(255, 255, 255);
+    --MM-White: #eee;
+    --M-width-lg: 88%;
+}
+html::-webkit-scrollbar {width: .6rem;}
+html::-webkit-scrollbar-track {background: var(--M-Black);}
+html::-webkit-scrollbar-thumb {background: linear-gradient(var(--M-Black), var(--M-Yellow),var(--M-Black),var(--M-Yellow));} 
+::selection {
+    color: var(--M-Black);
+    background-color: var(--M-Yellow);
+}
+html {font-size: var(--M-width-lg);}
+body{
+    width: 100%;min-height: 100vh;
+    display: flex;align-items: center;justify-content: center;
+}
+.aboute {
+    width: 100%;height: 100%;
+    display: flex;align-items: center;justify-content: center;flex-direction: column;
+}
+#partone , #partthree {background: var(--M-Black);}
+#parttow , #partfor {background: var(--MM-Black);}
+.aboute .part {
+    display: flex;align-items: center;justify-content: space-evenly;
+    gap: 2rem;
+    width: 100%;height: 50vh;
+}
+.aboute .part .imgBox {width: 40%;height: 100%;overflow: hidden;}
+.aboute .part .imgBox img {width: 100%;height: 100%;object-fit: cover;}
+.aboute .part .textBox {
+    display: flex;align-items: center;justify-content: center;flex-direction: column;
+    gap: .7rem;
+    width: 60%;height: 100%;
+    padding: 2rem;
+}
+.aboute .part .textBox h3 {
+    font-size: 3rem;
+    color: var(--M-Yellow);
+    letter-spacing: 1.5;
+    transition: .8s linear;
+}
+.aboute .part .textBox p {
+    font-size: 2rem;
+    color: var(--M-White);
+    letter-spacing: 1.5;
+    line-height: 3rem;
+    transition: .8s linear;
+}
+
+.lds-spinner {
+    background-color: rgba(6, 5, 5, 0.458);
+    display: flex;align-items: center;justify-content: center;
+    position: fixed;
+    top: 0;left: 0;
+    width: 100%;height: 100%;
+    z-index: 2000;
+  }
+  .lds-spinner.dan {opacity: 0;z-index: -1000;}  
+  .lds-spinner div {
+    transform-origin: 40px 40px;
+    animation: lds-spinner 1.2s linear infinite;
+    position: absolute;top: 50%;left: 50%;
+  }
+  .lds-spinner div:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 37px;
+    width: 15px;
+    height: 200px;
+    border-radius: 20%;
+    background: #fff;
+  }
+  .lds-spinner div:nth-child(1) {
+    transform: rotate(0deg);
+    animation-delay: -1.1s;
+  }
+  .lds-spinner div:nth-child(2) {
+    transform: rotate(30deg);
+    animation-delay: -1s;
+  }
+  .lds-spinner div:nth-child(3) {
+    transform: rotate(60deg);
+    animation-delay: -0.9s;
+  }
+  .lds-spinner div:nth-child(4) {
+    transform: rotate(90deg);
+    animation-delay: -0.8s;
+  }
+  .lds-spinner div:nth-child(5) {
+    transform: rotate(120deg);
+    animation-delay: -0.7s;
+  }
+  .lds-spinner div:nth-child(6) {
+    transform: rotate(150deg);
+    animation-delay: -0.6s;
+  }
+  .lds-spinner div:nth-child(7) {
+    transform: rotate(180deg);
+    animation-delay: -0.5s;
+  }
+  .lds-spinner div:nth-child(8) {
+    transform: rotate(210deg);
+    animation-delay: -0.4s;
+  }
+  .lds-spinner div:nth-child(9) {
+    transform: rotate(240deg);
+    animation-delay: -0.3s;
+  }
+  .lds-spinner div:nth-child(10) {
+    transform: rotate(270deg);
+    animation-delay: -0.2s;
+  }
+  .lds-spinner div:nth-child(11) {
+    transform: rotate(300deg);
+    animation-delay: -0.1s;
+  }
+  .lds-spinner div:nth-child(12) {
+    transform: rotate(330deg);
+    animation-delay: 0s;
+  }
+  @keyframes lds-spinner {
+    0% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
+
+@media (max-width:800px) {
+    .lds-spinner div:after {width: 15px;height: 130px;}
+    .lds-spinner div {position: absolute;top: 40%;left: 40%;}
+}
+
+@media (max-width:1450px) {
+    .aboute .part .textBox h3 {font-size: 2.4rem;}
+    .aboute .part .textBox p {font-size: 1.5rem;}
+}
+@media (max-width:1140px) {
+    .aboute .part .imgBox ,.aboute .part .textBox{width: 100%;}
+    .aboute .part {flex-direction: column;height: 100%;}
+}
+@media (max-width: 520px) {
+    .aboute .part .textBox h3 {font-size: 1.8rem;line-height: 2rem;}
+    .aboute .part .textBox p {font-size: 1.2rem;line-height: 2rem;}
+    .aboute .part .textBox {gap: .5rem;padding: 1.5rem;}
+}
