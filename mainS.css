@@ -212,3 +212,101 @@ a {cursor: pointer;}
     color: var(--M-Yellow);
     font-size: 2rem;
 }
+/* -=-=-=- menu -=-=-=- */
+.menu {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* -=-=-=- menu left -=-=-=- */
+.menu .leftM {
+    width: 50%; height: 100%;
+    border-top: 2px solid var(--M-White);
+    border-bottom: 2px solid var(--M-White);
+}
+/* -=-=-=- menu right -=-=-=- */
+.menu .rightM {
+    width: 960px;
+    height: 100%;
+    background: var(--M-Black);
+    z-index: 100;
+    border-left: 2px solid var(--M-White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.menu .rightM .container {
+    height: 80%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5rem; 
+}
+.menu .rightM .container .imageBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 8rem;
+    border-bottom-right-radius: 8rem;
+    border-bottom-left-radius: 8rem;
+    position: relative;
+    overflow: hidden;
+    border-top: 2px solid var(--M-Yellow);
+    border-right: 2px solid var(--M-Yellow);
+    border-left: 2px solid var(--M-White);
+    border-bottom: 2px solid var(--M-White);
+}
+.menu .rightM .container .imageBox::after {
+    content: '';
+    background: transparent;
+    width: 70%;height: 70%;
+    position: absolute;
+    top: 3%;right: 3%;
+    border-top: 2px solid var(--M-White);
+    border-right: 2px solid var(--M-White);
+    z-index: 200;
+}
+
+.menu .rightM .container .imageBox img {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+.menu .rightM .container .imageBox img.showIM {
+    display: flex;
+    animation: bingo1 1.5s , bingo2 6.2s;
+}
+@keyframes bingo2 {
+    from {transform: scale(1,1) rotate(0);}
+    to {transform: scale(1.2,1.2) rotate(10deg);}
+}
+@keyframes bingo1 {
+    from{opacity: 0;}
+    to{opacity: 1;}
+}
+.menu .rightM h3 {
+    font-size: 3rem;
+    color: var(--M-Yellow);
+    margin-bottom: 5rem;
+}
+.menu .rightM .textBox a {
+    font-size: 2rem;
+    color: var(--M-White);
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+.menu .rightM .textBox h4 {
+    font-size: 2rem;
+    color: var(--M-Yellow);
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    text-align: center;
+    margin: 1rem 0;
+}
