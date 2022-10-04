@@ -83,3 +83,10 @@ gotologin2.addEventListener('click',() => {
 gotoform2.addEventListener('click',() => {
     window.location = 'formH.html'
 });
+// spinner ):
+window.onload = setTimeout(dan , 3500);
+
+function dan(){
+    const spinner = document.querySelector('.lds-spinner');
+    spinner.classList.add('dan')
+}
