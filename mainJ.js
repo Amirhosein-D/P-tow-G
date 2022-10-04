@@ -35,3 +35,37 @@ function changeSMenu() {
     imgM2.classList.contains('showIM') && (imgM2.classList.remove('showIM'),imgM3.classList.add('showIM'),startSMenu()); 
     imgM1.classList.contains('showIM') && (imgM1.classList.remove('showIM'),imgM2.classList.add('showIM'),startSMenu());   
 };
+// header tow links ):
+const gotoproduct = document.querySelector('.gotoproduct');
+const gotologin = document.querySelector('.gotologin');
+const gotoform = document.querySelector('.gotoform');
+
+gotoproduct.addEventListener('click',() => {
+    window.location = 'productH.html'
+});
+gotologin.addEventListener('click',() => {
+    window.location = 'logH.html'
+});
+gotoform.addEventListener('click',() => {
+    window.location = 'formH.html'
+});
+
+const goOneparttoUp = document.querySelector('.goOneparttoUp');
+const goOneparttoDown = document.querySelector('.goOneparttoDown');
+ 
+let up = 0;
+let dwon = 0;  
+goOneparttoDown.addEventListener('click',() => {    
+    dwon == 4 && (window.location = '#contactus',dwon = 5,up = 5);
+    dwon == 3 && (window.location = '#discount',dwon = 4,up = 4);
+    dwon == 2 && (window.location = '#comment',dwon = 3,up = 3);
+    dwon == 1 && (window.location = '#menu',dwon = 2,up = 2);
+    dwon == 0 && (window.location = '#aboute',dwon = 1,up = 1);
+});
+goOneparttoUp.addEventListener('click',() => {    
+    up == 1 && (window.location = '#home',dwon = 0,up = 0);
+    up == 2 && (window.location = '#aboute',dwon = 1,up = 1);
+    up == 3 && (window.location = '#menu',dwon = 2,up = 2);
+    up == 4 && (window.location = '#comment',dwon = 3,up = 3);
+    up == 5 && (window.location = '#discount',dwon = 4,up = 4);
+});
