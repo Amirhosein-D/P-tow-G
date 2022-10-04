@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <!-- -=-=-=- icon name site -=-=-=- -->
+    <link rel="icon" href="8.png">
+    <!-- -=-=-=- link style file -=-=-=- -->
+    <link rel="stylesheet" href="formS.css">
+    <!-- -=-=-=- link remix icon -=-=-=- -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- -=-=-=- link font -=-=-=- -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+
+    <section class="form" id="form">
+
+        <div class="partOne">
+            <!-- name -->
+            <div class="inputBox">
+                <span> user name </span>
+                <input type="text" spellcheck="false" id="username">
+            </div>
+            <!-- number -->
+            <div class="inputBox">
+                <span> your number </span>
+                <input type="number" id="number">
+            </div>
+            <div class="btnBox">
+                <button class="Bnext1">Next</button>
+            </div>
+        </div>
+
+        <div class="partTow">
+            <!-- order -->
+            <div class="inputBox">
+                <span>your order</span>
+                <textarea id="order" cols="1" rows="1" spellcheck="false"></textarea>
+            </div>
+            <!-- number order -->
+            <div class="inputBox">
+                <span>how meny order</span>
+                <input type="number" id="numberorder">
+            </div>
+            <div class="btnBox">
+                <button class="Bpreve1">Preve</button>
+                <button class="Bnext2">Next</button>
+            </div>
+        </div>
+
+        <div class="partThree">
+            <!-- address -->
+            <div class="inputBox">
+                <span>your address</span>
+                <textarea id="address" cols="1" rows="1" spellcheck="false"></textarea>
+            </div>
+            <!-- noa pardikht -->
+            <div class="inputBox">
+                <span>how you pay</span>
+                <div class="inpop">
+                    <h3>bank</h3>
+                    <input type="checkbox">
+                </div>
+                <div class="inpop">
+                    <h3>int</h3>
+                    <input type="checkbox">
+                </div>
+            </div>
+            <div class="btnBox">
+                <button class="Bpreve2">Preve</button>
+                <button class="Bnext3">Next</button>
+            </div>
+        </div>
+
+        <div class="partFor">
+            <div class="inputBox">
+                <span>your comment</span>
+                <textarea id="comment" cols="1" rows="" spellcheck="false"></textarea>
+            </div>
+            <div class="btnBox">
+                <button class="Bpreve3">Preve</button>
+                <button class="Bsend">Send</button>
+            </div>
+        </div>
+
+    </section>
+    <!-- -=-=-=- spinner -=-=-=- -->
+    <div class="lds-spinner"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+
+
+
+
+
+
+    <script src="formJ.js"></script>
+</body>
+</html>
