@@ -373,3 +373,104 @@ a {cursor: pointer;}
     color: var(--MM-White);
     letter-spacing: 1.5px;
 }
+/* -=-=-=- discount -=-=-=- */
+.discount {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.discount .rightD {
+    width: 50%;
+    height: 100%;
+    border-top: 2px solid var(--M-White);
+    border-bottom: 2px solid var(--M-White);
+}
+.discount .leftD {
+    width: 960px;
+    height: 100%;
+    background: var(--M-Black);
+    z-index: 100;
+    border-right: 2px solid var(--M-White);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.discount .leftD .cartDis {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 30rem;
+    height: 60rem;
+    position: relative;
+    overflow: hidden;
+}
+.discount .leftD .cartDis img {
+    width: 100%;
+    height: 35rem;
+    object-fit: cover;
+}
+.discount .leftD .cartDis::before {
+    content: 'Dont miss this discount, one week left';
+    font-weight: bold;
+    text-align: center;
+    color: black;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 58.4%;
+    /* background: rgba(249, 240, 0, 0.5); */
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transition: 1s;
+}
+.discount .leftD .cartDis:hover::before{
+    opacity: 1;;
+}
+.discount .leftD .cartDis .textDBox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 2rem;
+}
+.discount .leftD .cartDis .textDBox del {
+    font-size: 2rem;
+    color: var(--M-Yellow);
+    text-decoration:line-through;
+}
+.discount .leftD .cartDis .textDBox h3 {
+    color: var(--M-Yellow);
+    font-size: 3rem;
+}
+.discount .leftD .cartDis .textDBox p {
+    color: var(--M-White);
+    font-size: 1.3rem;
+    text-align: center;
+    letter-spacing: 2px;
+}
+.discount .leftD .cartDis .textDBox .price {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+}
+.discount .leftD .cartDis .textDBox .price span {
+    font-size: 2rem;
+    color: var(--M-Yellow);
+}
+.discount .leftD .cartDis .textDBox a {
+    width: 100%;
+    font-size: 2rem;
+    color: var(--M-Black);
+    text-align: center;
+    padding: 1rem;
+    background: var(--M-Yellow);
+    font-weight: bold;
+}
